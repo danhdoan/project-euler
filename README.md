@@ -1,5 +1,3 @@
-# Rust Practice
-
-To practice with Rust
+# Project Euler
 
 by Danh Doan
