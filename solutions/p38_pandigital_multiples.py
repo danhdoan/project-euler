@@ -18,7 +18,7 @@ def process(x):
 
 
 ans = 0
-for x in range(1000001):
+for x in range(100001):
     res = process(x)
     if res != -1:
         print(res)
