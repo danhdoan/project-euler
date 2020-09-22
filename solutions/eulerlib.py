@@ -58,6 +58,29 @@ def totient(x):
 # ==============================================================================
 
 
+def generatePrimes(N):
+    """Generate prime numbers using Eratosthenes sieve"""
+
+    half = N // 2 + 1
+    sieve = [True] * half
+    sieve[0] = False
+    i = 1
+    while 2*i*i < half:
+        if sieve[i]: 
+            curr = 3*i + 1
+            while curr < half:
+                sieve[curr] = False
+                curr += 2*i + 1
+        i += 1
+
+    primes = [2]
+    for i in range(3, N+1, 2):
+        if sieve[i >> 1]:
+            primes.append(i)
+    return primes
+# ==============================================================================
+
+
 if __name__ == '__main__':
     for i in range(2, 10):
         print(totient(i))
