@@ -6,3 +6,5 @@ target/
 *.txt
 *.swp
 test*
+
+*.o
